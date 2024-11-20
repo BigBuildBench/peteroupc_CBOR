@@ -1,0 +1,15 @@
+<Project Sdk='Microsoft.NET.Sdk'>
+  <PropertyGroup>
+    <TargetFramework>netcoreapp7.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition=' &apos;$(Configuration)&apos;==&apos;Debug&apos; '>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>rules.ruleset</CodeAnalysisRuleSet></PropertyGroup>
+  <PropertyGroup Condition=' &apos;$(Configuration)&apos;==&apos;Release&apos; '>
+    <DebugType>none</DebugType>
+    <CodeAnalysisRuleSet>rules.ruleset</CodeAnalysisRuleSet></PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include='Resources.restext'>
+      <LogicalName>Resources.resources</LogicalName>
+    </EmbeddedResource></ItemGroup>
+   </Project>

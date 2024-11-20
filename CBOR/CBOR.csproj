@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.0; net6.0</TargetFrameworks>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>5.0.0-alpha2</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Owners>Peter Occil</Owners>
+    <Description>A C# implementation of Concise Binary Object Representation (CBOR), a general-purpose binary data format defined in RFC 8949.</Description>
+    <Summary>A C# implementation of Concise Binary Object Representation (CBOR), a general-purpose binary data format defined in RFC 8949. </Summary>
+    <Copyright>Written by Peter O.  Any copyright to this work is released to the Public Domain.  In case this is not possible, this work is also licensed under the Unlicense.</Copyright>
+    <Authors>Peter Occil</Authors>
+    <PackageId>PeterO.Cbor</PackageId>
+    <PackageLicenseExpression>Unlicense</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/peteroupc/CBOR</PackageProjectUrl>
+    <PackageReleaseNotes>
+Version 5.0:
+
+- Alpha version
+- Some deprecated features from earlier versions were obsoleted.
+- Attempt to make the library trimmable by making use of reflection optional.
+
+Version 4.5:
+
+- Add support for JSON Pointers and JSON Patches
+- Add option to keep map key order when decoding CBOR and JSON
+- Add option to write JSON using only ASCII characters
+- CBORObject.ToString renders strings as ASCII
+- Add support for deserializing CBOR objects to IReadOnlyList, IReadOnlyCollection, and ReadOnlyDictionary
+
+Note that after version 4.5x, the CBOR library's repository will stop including special projects for .NET 2.0 and .NET 4.0, leaving the .NET-Standard project for building the library.
+
+</PackageReleaseNotes>
+    <PackageTags>cbor data serialization binary json</PackageTags>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>PeterO.snk</AssemblyOriginatorKeyFile>
+    <Title>CBOR (Concise Binary Object Representation)</Title>
+    <PackOnBuild>true</PackOnBuild>
+  <CodeAnalysisRuleSet>rules.ruleset</CodeAnalysisRuleSet><PackageLicenseExpression>CC0-1.0</PackageLicenseExpression>
+
+  <IsTrimmable>true</IsTrimmable>
+  <LangVersion>11.0</LangVersion>
+      <PolySharpIncludeRuntimeSupportedAttributes>true</PolySharpIncludeRuntimeSupportedAttributes>
+      <DefineConstants>MULTI_TARGETING_SUPPORT_ATTRIBUTES</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
+    <DebugType>full</DebugType>
+    <DocumentationFile>bin\Debug\netstandard1.0\CBOR.xml</DocumentationFile>
+
+  <CodeAnalysisRuleSet>rules.ruleset</CodeAnalysisRuleSet></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)'=='Release' ">
+    <DebugType>none</DebugType>
+    <DocumentationFile>bin\Release\netstandard1.0\CBOR.xml</DocumentationFile>
+
+  <CodeAnalysisRuleSet>rules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+                  </Project>

@@ -1,0 +1,16 @@
+<Project Sdk='Microsoft.NET.Sdk'>
+  <PropertyGroup>
+    <TargetFramework>netcoreapp6.0</TargetFramework>
+    <!--<GenerateProgramFile>false</GenerateProgramFile>-->
+  </PropertyGroup>
+  <PropertyGroup Condition=' &apos;$(Configuration)&apos;==&apos;Debug&apos; '>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>rules.ruleset</CodeAnalysisRuleSet></PropertyGroup>
+  <PropertyGroup Condition=' &apos;$(Configuration)&apos;==&apos;Release&apos; '>
+    <DebugType>none</DebugType>
+    <CodeAnalysisRuleSet>rules.ruleset</CodeAnalysisRuleSet></PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Include='stylecop.json'/>
+    <AdditionalFiles Include='rules.ruleset'/>
+  </ItemGroup>
+</Project>
